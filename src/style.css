@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ body {
+  background-color: #292524;
+  color: #fafaf9;
+  font-family: "sono", sans-serif;
+  padding: 48px 64px;
+
+}
+.message {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 24px;
+}
+.hidden {
+  display: none !important;
+}
+/* Header */
+#root {
+  max-width: 1500px;
+  margin: auto;
+}
+.header {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.logo img {
+  width: 68px;
+  height: 68px;
+}
+h1 {
+  font-size: 42px;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-top: 3px;
+  font-family: "Coiny", cursive;
+}
+.fact-form {
+  background-color: #57534e;
+  margin-bottom: 16px;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 16px;
+}
+
+.fact-form input, .fact-form select {
+  width: 220px;
+  background-color: #78716c;
+  padding: 16px;
+  border-radius: 100px;
+  font-size: 18px;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+}
+.fact-form input::placeholder {
+  color: #a8a29e;
+}
+.fact-form input:first-child {
+  flex-grow: 1;
+}
+.fact-form span {
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 18px;
+}
+@media (max-width: 1024px) {
+  body {
+    padding: 32px 48px;
+  }
+  .fact-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .fact-form input, .fact-form select {
+    width: auto;
+  }
+}
+/* Elements */
+.main {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 48px;
+}
+@media (max-width:900px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fact {
+  font-size: 20px;
+  line-height: 1.4;
+  background-color: #57534e;
+  margin-bottom: 16px;
+  padding: 16px 24px;
+  letter-spacing: -1px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+}
+@media (max-width:1200px) {
+  .fact {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-end ;
+  }
+}
+.source:link, .source:visited {
+  text-decoration: none;
+  color:#a8a29e;
+  margin-left: 12px;
+  transition: .3s;
+}
+.source:hover{
+  color: #3b82f6;
+
+}
+.vote-buttons {
+  margin-left: auto;
+  display: flex;
+  flex-shrink: 0;
+  gap: 8px;
+}
+.vote-buttons button {
+  background-color: #78716c;
+  color: inherit;
+  border: none;
+  border-radius: 100px;
+  padding: 6px 12px;
+  font-size: 18px;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+.vote-buttons button:hover {
+  background-color: #292524;
+}
+.tag {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Coiny", cursive;
+  padding-top: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 100px;
+}
+ul {
+  list-style: none;
+}
+
+.category {
+  margin-bottom: 16px;
+}
+.btn {
+  border: none;
+  font-family: 'Coiny', sans-serif;
+  text-transform: uppercase;
+  font-size: 17px;
+  line-height: 1;
+  padding: 16px 0 13px;
+  background-image: linear-gradient(135deg, #3b82f6, #ef4444,#16a34a,#eab308);
+  color: inherit;
+  cursor: pointer;
+  transition: .3s;
+  border-radius: 100px;
+}
+.btn:hover{
+  transform: scale(110%) rotate(-2deg);
+}
+
+.btn-large {
+  font-size: 30px;
+  padding: 20px 32px 17px;
+}
+@media (max-width: 650px) {
+  .logo img {
+    width: 58px;
+    height: 58px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  .btn-large {
+    font-size: 20px;
+    padding: 18px;
+  }
+}
+@media (max-width: 550px) {
+  h1 {
+    font-size: 25px;
+  }
+  .btn-large {
+    font-size: 12px;
+    padding: 15px;
+  }
+}
+@media (max-width: 400px) {
+  .header {
+    margin-bottom: 20px;
+  }
+  .logo img {
+    width: 38px;
+    height: 38px;
+  }
+  h1 {
+    font-size: 15px;
+  }
+  .btn-large {
+    font-size: 10px;
+    padding: 4px;
+  }
+}
+
+.btn-all-categories {
+  margin-bottom: 16px;
+  width: 100%;
+}
+.btn-category {
+  width: 100%;
+  background-image: none;
+
+}
